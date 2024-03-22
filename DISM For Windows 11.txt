@@ -1,0 +1,82 @@
+dism /Get-WimInfo /WimFile:"C:\Users\Asura\Documents\Windows10Enterprise\sources\install.wim"
+dism /Get-WimInfo /WimFile:"C:\Users\Asura\Documents\Windows10Enterprise\sources\install.esd"
+
+dism /export-image /SourceImageFile:"C:\Users\Asura\Documents\Windows\sources\install.esd" /SourceIndex:3 /DestinationImageFile:"C:\Users\Asura\Documents\Windows\sources\install.wim" /Compress:max /CheckIntegrity
+
+DISM /Mount-Wim /WimFile:"C:\Users\Asura\Documents\Windows\sources\install.wim" /index:1 /MountDir:"C:\Users\Asura\Documents\temp"
+
+dism /get-mountedwiminfo
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /cleanup-image /StartComponentCleanup /ResetBase
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-ProvisionedAppxPackages
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneVideo_2019.19071.19011.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneMusic_2019.19071.19011.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.YourPhone_2019.430.2026.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.549981C3F5F10_1.1911.21713.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_4.25.20211.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GetHelp_10.1706.13331.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Getstarted_8.2.22942.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Microsoft3DViewer_6.1908.2042.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftOfficeHub_18.1903.1152.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftSolitaireCollection_4.4.8204.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftStickyNotes_3.6.73.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MixedReality.Portal_2000.19081.1301.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MSPaint_2019.729.2301.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Office.OneNote_16001.12026.20112.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.People_2019.305.632.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ScreenSketch_2019.904.1644.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.SkypeApp_14.53.77.0_neutral_~_kzf8qxf38zg5c
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Wallet_2.4.18324.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsAlarms_2019.807.41.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCalculator_2020.1906.55.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCamera_2018.826.98.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:microsoft.windowscommunicationsapps_16005.11629.20316.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsFeedbackHub_2019.1111.2029.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsMaps_2019.716.2316.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2019.716.2313.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Xbox.TCUI_1.23.28002.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxApp_48.49.31001.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxGameOverlay_1.46.11001.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxGamingOverlay_2.34.28001.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxSpeechToTextOverlay_1.17.29001.0_neutral_~_8wekyb3d8bbwe
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-Packages
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Speech-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-OCR-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Handwriting-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-TextToSpeech-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-TabletPCMath-Package~31bf3856ad364e35~amd64~~10.0.19041.2193
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.19041.2965
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-Features
+
+rd "C:\Users\Asura\Documents\temp\Program Files (x86)\Microsoft\Edge" /s /q
+rd "C:\Users\Asura\Documents\temp\Program Files (x86)\Microsoft\EdgeUpdate" /s /q
+
+takeown /f C:\Users\Asura\Documents\temp\Windows\System32\OneDriveSetup.exe
+icacls C:\Users\Asura\Documents\temp\OneDriveSetup.exe /grant Administrators:F /T /C
+del /f /q /s "C:\Users\Asura\Documents\temp\Windows\System32\OneDriveSetup.exe"
+
+reg load HKLM\zCOMPONENTS "C:\Users\Asura\Documents\temp\Windows\System32\config\COMPONENTS"
+reg load HKLM\zDEFAULT "C:\Users\Asura\Documents\temp\Windows\System32\config\default"
+reg load HKLM\zNTUSER "C:\Users\Asura\Documents\temp\Users\Default\ntuser.dat"
+reg load HKLM\zSOFTWARE "C:\Users\Asura\Documents\temp\Windows\System32\config\SOFTWARE"
+reg load HKLM\zSYSTEM "C:\Users\Asura\Documents\temp\Windows\System32\config\SYSTEM"
+
+Reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "ShippedWithReserves" /t REG_DWORD /d "0" /f >nul 2>&1
+
+reg unload HKLM\zCOMPONENTS 
+reg unload HKLM\zDRIVERS
+reg unload HKLM\zDEFAULT
+reg unload HKLM\zNTUSER
+reg unload HKLM\zSCHEMA
+reg unload HKLM\zSOFTWARE
+reg unload HKLM\zSYSTEM
+
+dism /unmount-image /mountdir:C:\Users\Asura\Documents\temp /commit
+
+oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\Users\Asura\Documents\Windows\boot\etfsboot.com#pEF,e,bC:\Users\Asura\Documents\Windows\efi\microsoft\boot\efisys.bin C:\Users\Asura\Documents\Windows C:\Users\Asura\Documents\Win10WIM.iso

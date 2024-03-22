@@ -1,0 +1,77 @@
+dism /export-image /SourceImageFile:install.esd /SourceIndex:3 /DestinationImageFile:install.wim /Compress:max /CheckIntegrity
+
+dism /Get-WimInfo /WimFile:"C:\Users\Asura\Documents\Windows10Enterprise\sources\install.wim"
+
+DISM /Mount-Wim /WimFile:"C:\Users\Asura\Documents\Windows10Enterprise\sources\install.wim" /index:1 /MountDir:"C:\Users\Asura\Documents\temp"
+
+dism /get-mountedwiminfo
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-Features
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-ProvisionedAppxPackages
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Clipchamp.Clipchamp_2.2.8.0_neutral_~_yxz26nhyzhsrt
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.549981C3F5F10_3.2204.14815.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingNews_4.2.27001.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_4.53.33420.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GamingApp_2021.427.138.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GetHelp_10.2201.421.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Getstarted_2021.2204.1.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftOfficeHub_18.2204.1141.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftSolitaireCollection_4.12.3171.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftStickyNotes_4.2.2.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Paint_11.2201.22.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.People_2020.901.1724.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:Microsoft.PowerAutomateDesktop_10.0.3735.0_neutral_~_8wekyb3d8bbwe
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-ProvisionedAppxPackage /PackageName:
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Get-Packages
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Speech-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-OCR-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Handwriting-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-TextToSpeech-en-gb-Package~31bf3856ad364e35~amd64~~10.0.19041.1
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-TabletPCMath-Package~31bf3856ad364e35~amd64~~10.0.19041.2193
+Dism /Image:"C:\Users\Asura\Documents\temp" /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.19041.2965
+
+rd "C:\Users\Asura\Documents\temp\Program Files (x86)\Microsoft\Edge" /s /q
+rd "C:\Users\Asura\Documents\temp\Program Files (x86)\Microsoft\EdgeUpdate" /s /q
+
+takeown /f C:\Users\Asura\Documents\temp\Windows\System32\OneDriveSetup.exe
+icacls C:\Users\Asura\Documents\temp\OneDriveSetup.exe /grant Administrators:F /T /C
+del /f /q /s "C:\Users\Asura\Documents\temp\Windows\System32\OneDriveSetup.exe"
+
+reg load HKLM\zCOMPONENTS "C:\Users\Asura\Documents\temp\Windows\System32\config\COMPONENTS" >nul
+reg load HKLM\zDEFAULT "C:\Users\Asura\Documents\temp\Windows\System32\config\default" >nul
+reg load HKLM\zNTUSER "C:\Users\Asura\Documents\temp\Users\Default\ntuser.dat" >nul
+reg load HKLM\zSOFTWARE "cC:\Users\Asura\Documents\temp\Windows\System32\config\SOFTWARE" >nul
+reg load HKLM\zSYSTEM "C:\Users\Asura\Documents\temp\Windows\System32\config\SYSTEM" >nul
+
+reg unload HKLM\zCOMPONENTS 
+reg unload HKLM\zDRIVERS
+reg unload HKLM\zDEFAULT
+reg unload HKLM\zNTUSER
+reg unload HKLM\zSCHEMA
+reg unload HKLM\zSOFTWARE
+reg unload HKLM\zSYSTEM
+
+Dism /Image:"C:\Users\Asura\Documents\temp" /cleanup-image /StartComponentCleanup /ResetBase
+
+oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\Users\Asura\Documents\Windows\boot\etfsboot.com#pEF,e,bC:\Users\Asura\Documents\Windows\efi\microsoft\boot\efisys.bin C:\Users\Asura\Documents\Windows C:\Users\Asura\Documents\Win10WIM.iso
